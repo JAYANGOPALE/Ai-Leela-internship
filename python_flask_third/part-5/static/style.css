@@ -1,0 +1,341 @@
+/*
+=============================================================================
+Personal Website Styles
+=============================================================================
+This CSS file is served from the 'static' folder.
+Flask automatically serves files from static/ at /static/filename
+=============================================================================
+*/
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8fafc;
+}
+
+/* Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    min-height: calc(100vh - 160px);
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-brand a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* Hero Section (Home Page) */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.hero .title {
+    font-size: 24px;
+    color: #667eea;
+    margin-bottom: 20px;
+}
+
+.hero .bio {
+    font-size: 18px;
+    color: #718096;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    color: #2d3748;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.card h3 {
+    color: #4a5568;
+    margin-bottom: 10px;
+}
+
+/* Skills */
+.skill-item {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.skill-bar {
+    background: #e2e8f0;
+    border-radius: 10px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: #718096;
+    margin-bottom: 15px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tech-tag {
+    background: #ebf8ff;
+    color: #2b6cb0;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Status Badges */
+.status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status-completed {
+    background: #c6f6d5;
+    color: #276749;
+}
+
+.status-in-progress {
+    background: #feebc8;
+    color: #c05621;
+}
+
+.status-planned {
+    background: #e9d8fd;
+    color: #6b46c1;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #edf2f7;
+    color: #4a5568;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+/* Contact Info */
+.contact-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item span {
+    font-weight: 500;
+    color: #4a5568;
+    min-width: 100px;
+}
+
+.contact-item a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-note {
+    color: #a0aec0;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Info Box */
+.info-box {
+    background: #ebf8ff;
+    border-left: 4px solid #4299e1;
+    padding: 15px 20px;
+    border-radius: 0 5px 5px 0;
+    margin: 20px 0;
+}
+
+.info-box.success {
+    background: #f0fff4;
+    border-color: #48bb78;
+}
+
+.info-box.warning {
+    background: #fffaf0;
+    border-color: #ed8936;
+}
+
+/* Not Found */
+.not-found {
+    text-align: center;
+    padding: 40px;
+}
+
+.not-found h2 {
+    color: #e53e3e;
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

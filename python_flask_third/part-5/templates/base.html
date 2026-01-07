@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ info.name }}{% endblock %}</title>
+
+    <!-- Link to our CSS file in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="{{ url_for('home') }}">{{ info.name }}</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
+            <li><a href="{{ url_for('about') }}" class="{% if request.endpoint == 'about' %}active{% endif %}">About</a></li>
+            <li><a href="{{ url_for('projects') }}" class="{% if request.endpoint == 'projects' or request.endpoint == 'project_detail' %}active{% endif %}">Projects</a></li>
+            <li><a href="{{ url_for('contact') }}" class="{% if request.endpoint == 'contact' %}active{% endif %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        {% block content %}
+        <!-- Page content goes here -->
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 {{ info.name }} | Built with Flask</p>
+        <p class="footer-note">
+            This website is served by a Python Flask server!
+        </p>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+
+{#
+=============================================================================
+TEMPLATE INHERITANCE EXPLAINED
+=============================================================================
+
+This is a BASE TEMPLATE. Other templates "extend" this one.
+
+Key Jinja2 blocks:
+- block title -> Page title
+- block content -> Main page content
+- block extra_css -> Additional CSS (optional)
+- block extra_js -> Additional JS (optional)
+
+Child templates use:
+extends "base.html"
+block content
+    <h1>My Page Content</h1>
+endblock
+
+Benefits:
+1. DRY (Don't Repeat Yourself) - navbar/footer defined once
+2. Consistent layout across all pages
+3. Easy to update site-wide elements
+4. Child templates only define what's different
+
+=============================================================================
+#}
