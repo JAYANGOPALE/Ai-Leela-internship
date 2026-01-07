@@ -1,0 +1,27 @@
+PROFILE IMAGE PLACEHOLDER
+=========================
+
+Instructions for adding your profile photo:
+
+1. Save your profile photo in this 'assets' folder
+2. Recommended formats: .jpg, .png, .webp
+3. Recommended size: 150x150 pixels (square)
+4. Rename it to: profile.jpg (or profile.png)
+
+5. Update the <img> tag in your HTML file:
+
+   FROM:
+   <img src="https://via.placeholder.com/150" alt="Profile Photo">
+
+   TO:
+   <img src="../assets/profile.jpg" alt="Your Name - Profile Photo">
+
+Tips for a good profile photo:
+- Use a clear, professional headshot
+- Ensure good lighting
+- Keep the background simple
+- Smile!
+
+Note: The placeholder images in the code use https://via.placeholder.com
+which generates temporary placeholder images. Replace these with your
+actual photos before deploying.

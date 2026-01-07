@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Portfolio</h1>
+
+        <!--
+            The <img> Tag:
+            - src: Path to the image file (can be local or URL)
+            - alt: Alternative text (important for accessibility & SEO)
+            - width/height: Control image dimensions
+
+            Bootstrap Image Classes:
+            - 'img-fluid': Makes image responsive (scales with container)
+            - 'rounded': Adds rounded corners
+            - 'rounded-circle': Makes image circular
+            - 'img-thumbnail': Adds border frame
+        -->
+
+        <!-- Profile Section -->
+        <div>
+            <h2>About Me</h2>
+
+            <!-- Option 1: Using a placeholder image -->
+            <img
+                src="https://via.placeholder.com/150"
+                alt="Profile Photo"
+                class="rounded-circle"
+            >
+
+            <!--
+                Option 2: Using your own image (uncomment and modify)
+                <img
+                    src="../assets/profile.jpg"
+                    alt="My Profile Photo"
+                    class="rounded-circle"
+                    width="150"
+                >
+            -->
+
+            <p>Hello! I am a student learning Full Stack Development.</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
