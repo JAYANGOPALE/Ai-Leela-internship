@@ -1,0 +1,77 @@
+/*
+ * Custom CSS for Portfolio Website
+ * This file demonstrates how to add custom styles alongside Bootstrap
+ */
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero section custom styling */
+.hero-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Profile image hover effect */
+.profile-img {
+    
+    width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+/* Skill card hover effect */
+.skill-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom horizontal rule styling */
+hr {
+    border-top: 3px solid #0d6efd;
+    opacity: 1;
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 70px; /* Account for sticky navbar */
+}
+
+/* Footer link styling */
+footer a {
+    color: #6c757d;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+        padding: 40px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .skill-card {
+        margin-bottom: 1rem;
+    }
+}
